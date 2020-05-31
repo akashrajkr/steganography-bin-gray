@@ -97,11 +97,11 @@ def cli():
 
 
 @cli.command()
-@click.option('--img1', required=True, type=str, help='Grayscale image that will hide another image')
-@click.option('--img2', required=True, type=str, help='Binary image that will be hidden')
+@click.option('--gray', required=True, type=str, help='Grayscale image that will hide another image')
+@click.option('--bin', required=True, type=str, help='Binary image that will be hidden')
 @click.option('--output', required=True, type=str, help='Output image')
-def merge(img1, img2, output):
-    merged_image = Steganography.merge(img1, img2)
+def merge(gray, bin, output):
+    merged_image = Steganography.merge(gray, bin)
     cv2.imwrite(output,merged_image)
     print('Encoded image saved in', output)
 

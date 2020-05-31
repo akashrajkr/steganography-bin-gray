@@ -11,8 +11,8 @@ img2 --> path to image that gets hidden inside img1.
 Then, merge and unmerge your files with:
 
 ```
-python implementation.py merge --img1=res/img1.jpg --img2=res/img2.jpg --output=res/output.png
-python implementation.py unmerge --img=res/output.png --output=res/output2.png
+python3 implementation.py merge --gray=images/gray.jpg --bin=images/binary.jpg --output=output/encoded.png
+python3 implementation.py unmerge --img=images/encoded.png --output=output/decoded.png
 ```
 
 **Note**: the **output image** from the **merge operation** and the **input image** for the **unmerge operation** must be in **PNG** format.
